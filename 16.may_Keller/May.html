@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<h1>Some Memorable Movies</h1>	
+	
+<h3><span class="ital">May</span>  (Nickolas D. Keller, 2023)</h3>
+
+<div class="sideBySide">
+<img class="filmStill" onClick="onClick_May_img01()" src="images/0529.jpg" alt="May">
+<img class="filmStill" onClick="onClick_May_img02()" src="images/0529 (1).jpg" alt="May"> 
+<img class="filmStill" onClick="onClick_May_img03()" src="images/0529 (2).jpg" alt="May">
+</div>
+	
+<p class="filmInfo" id="May_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, accusantium eveniet assumenda id aliquam quod esse voluptate rem, aspernatur, labore minus praesentium! Quia aliquam numquam necessitatibus optio! Harum impedit suscipit odio consequuntur, iusto, veritatis molestiae! Dolorem eos illo numquam distinctio, tenetur ut. Provident iusto similique illo a ipsam eaque sunt.</p>
+	
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to Movie</button>
+
+<h3><span class="ital"></span> (Nickolas D. Keller, 2023)</h3> 
+<div class="sideBySide">
+<img class="filmStill" onClick="" src="" alt="Lone Leaf">
+<img class="filmStill" onClick="" src="" alt="Lone Leaf">
+<img class="filmStill" onClick="" src="" alt="Lone Leaf">
+</div>
+	
+<p class="filmInfo" id="_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laboriosam repudiandae sequi eum sunt mollitia illo repellendus, reprehenderit tempora porro expedita odio, voluptate voluptates harum recusandae debitis quis totam. Corporis ipsum cumque quae nostrum, expedita cum, eveniet deleniti vitae repellat atque alias, labore id repudiandae fugit saepe, et ratione libero?</p>
+	
+</body>
+<script>
+	
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden";
+	
+// MAY section **************************************************************************	
+	
+var May_text = document.getElementById("May_text");
+	
+var May01 = "May is a 2023 short film by Nickolas D. Keller. It features a character whose face we never see, but only receive point of view shots of what they see. Much of the film is the character walking while their inner thoughts and feelings are portrayed with a voiceover monlogue. In between the thoughts and feelings of the monologue there are usually long silent pauses to give the audience time to reflect on what the speaker just said."	
+	
+var May02 = "There usually isn't much noise from the film other than what we here from the voiceover, however there is a scene shown above in the middle film still where the character is driving around. While driving, the character is listening to music- in this particular moment it was <em>After Party</em> by Don Toliver. Nothing else happens in the scene, making the audience think that the character is more in deep thought and the music is a device that helps him ponder over what is on his mind."
+
+var May03 = "When the character is not walking around the city that he lives in, he is usually seen doing everyday tasks. As previously discussed, he drives around the city and even ends up at the gym. The audience also sees him sitting while at work, watching a tv show at home, as well as making food in the kitchen."
+
+var May00 = "As the days pass, this film follows a man and how he deals with his inner thoughts and feelings."
+
+May_text.innerHTML = May00;
+	
+function onClick_May_img01() { 
+	May_text.innerHTML = May01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}
+	
+function onClick_May_img02(){
+	May_text.innerHTML = May02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+		
+	
+function onClick_May_img03(){
+	May_text.innerHTML = May03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+
+function revealButton(){
+if (img01_clicked){
+console.log("REVEAL BUTTON");
+	}
+}
+	
+function revealButton(){
+if (img01_clicked && img02_clicked){
+console.log("REVEAL BUTTON");
+	}
+}
+
+function revealButton(){
+if (img01_clicked && img02_clicked && img03_clicked){
+	console.log("REVEAL BUTTON");
+	gotoMovie_btn.style.visibility = "visible";
+	}
+}
+	
+function gotoMovie(){
+	window.open(https://drive.google.com/file/d/1e5BgcOep6zvlRktImAp242rVKLr4fGT9/view?usp=drive_link)
+}
+	
+// section **********************************************************************************	
+	
+var _text = document.getElementById("")	
+
+</script>
+</html>
