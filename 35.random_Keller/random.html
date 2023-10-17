@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>random</title>
+<link href="css/random.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<div class="sideBySide">
+<img class="food" id="leftImage" onClick="randomizer(event)" src="images/brownie.jpg" alt="brownie">
+<img class="food" id="middleleftImage" onClick="randomizer(event)" src="images/burger.jpg" alt="burger">
+<img class="food" id="middleImage" onClick="randomizer(event)" src="images/cake.jpg" alt="cake">
+</div>
+	
+</body>
+	
+<script>
+	
+// elemets that can change
+	
+var leftImage = document.getElementById("leftImage");
+var middleImage = document.getElementById("middleImage");
+var rightImage = document.getElementById("rightImage");	
+	
+// list of images in the images folder
+	
+var brownie = "images/brownie.jpg"
+var burger = "images/burger.jpg"
+var cake = "images/cake.jpg"
+var cakeballs = "images/cakeballs.jpg"
+var eggandnut = "images/eggandnut.jpg"
+	
+function randomizer(event){
+	var x = Math.floor(Math.random() * 5) + 1;
+//	console.log("var x = " + x);
+	console.log(event.currentTarget.id);
+	if (x == 1){
+		event.currentTarget.src = brownie;
+		
+	if (x == 2){
+		event.currentTarget.src = burger;
+		
+	if (x == 3){
+		event.currentTarget.src = cake;	
+		
+	if (x == 4){
+		event.currentTarget.src = cakeballs;
+		
+	if (x == 5){
+		event.currentTarget.src = eggandnut;	
+	}
+}	
+</script>
+</html>
