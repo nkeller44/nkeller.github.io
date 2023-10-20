@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>changingVideos</title>
+<link href="css/changingVideos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div>
+      <video id="vid" onClick="switchVideo()" preload="auto" muted="muted" autoplay="autoplay" loop="loop" >
+        <source src="video/blackvid.mp4" type="video/mp4">
+      </video>
+	</div>
+</body>
+	
+	<script>
+	var vid = document.getElementById("vid");
+		
+	// references to the videos	
+	var beginnings = "video/beginnings_1.mp4";
+	var blackvid = "video/blackvid.mp4";
+	var quiet = "video/quiet.mp4";
+	var redvid = "video/redvid_1.mp4";
+	
+	var channel = 0;
+	var pausedAt = 0;
+		
+	function switchVideo() {
+		channel ++;
+		pausedAt = vid.currentTime;
+		console.log(vid.currentTime);
+		
+		if (channel == 1){
+			vid.src = redvid;
+			vid.currentTime = pausedAt;
+		}
+		
+		if (channel == 2){
+			vid.src = blackvid;
+			vid.currentTime = pausedAt;
+		}
+			
+		if (channel == 3){
+			vid.src = quiet;
+			vid.currentTime = pausedAt;
+		}
+		
+		if (channel == 4){
+			vid.src = beginnings;
+			vid.currentTime = pausedAt;
+			channel = 0;
+		}
+		
+		vid.play();
+		vid.muted = false;
+	}	
+		
+	</script>
+	
+</html>
