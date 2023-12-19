@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Final Chance at Tournament 2</title>
+<link href="css/goodbowling.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+	<video id="goodbowling" preload="auto" controls="controls" >
+  <source src="videos/GoodBowling.mp4" type="video/mp4">
+	</video>
+</div>
+	
+<div id="DIVforButtons">
+<p>
+<button id="topButton" onClick="buttonOne()">End</button>  
+</p>    
+</div>
+	
+</body>
+	
+<script>
+
+    document.getElementById("goodbowling").addEventListener('ended',whenVideoEnds,false);
+	
+	var topButton = document.getElementById("topButton");
+	var bottomButton = document.getElementById("bottomButton");
+	
+	topButton.style.display = "none";
+	bottomButton.style.display ="none";
+	
+        
+   function whenVideoEnds(){
+	   console.log("this function runs when the video ends");
+	   topButton.style.display = "block";
+	   bottomButton.style.display ="block";
+}
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+		//alert("buttonOne works");
+		window.open ("Endscreen.html",false)
+		//once you make the next HTML file, put it in line 65 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+   
+    }    
+	
+</script>
+</html>

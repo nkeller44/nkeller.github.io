@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Make Breakfast</title>
+<link href="css/makebreakfast.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+	<video id="makebreakfast" preload="auto" controls="controls" >
+  <source src="videos/MakeBreakfast.mp4" type="video/mp4">
+	</video>
+</div>
+	
+<div id="DIVforButtons">
+<p>
+<button id="topButton" onClick="buttonOne()">Play Video Games</button>  
+</p>    
+<p>
+<button id="bottomButton" onClick="buttonTwo()">Practice Bowling</button>    
+</p>
+</div>
+	
+</body>
+	
+<script>
+
+    document.getElementById("makebreakfast").addEventListener('ended',whenVideoEnds,false);
+	
+	var topButton = document.getElementById("topButton");
+	var bottomButton = document.getElementById("bottomButton");
+	
+	topButton.style.display = "none";
+	bottomButton.style.display ="none";
+	
+        
+   function whenVideoEnds(){
+	   console.log("this function runs when the video ends");
+	   topButton.style.display = "block";
+	   bottomButton.style.display ="block";
+}
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+		//alert("buttonOne works");
+		window.open ("PlayVideoGames.html",false)
+		//once you make the next HTML file, put it in line 65 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+    }
+        
+    function buttonTwo() {
+		//alert("buttonTwo works");	
+        window.open ("PracticeBowling.html",false)
+		//once you make the next HTML file, put it in line 72 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+    }    
+	
+</script>
+</html>

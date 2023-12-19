@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text Breona</title>
+<link href="css/textbreona.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+	<video id="textbreona" preload="auto" controls="controls" >
+  <source src="videos/TextBreona.mp4" type="video/mp4">
+	</video>
+</div>
+	
+<div id="DIVforButtons">
+<p>
+<button id="topButton" onClick="buttonOne()">Tell her you're staying in for the night</button>  
+</p> 
+<p>
+<button id="bottomButton" onClick="buttonTwo()">Ask her to make plans</button>
+</p>
+</div>
+	
+</body>
+	
+<script>
+
+    document.getElementById("textbreona").addEventListener('ended',whenVideoEnds,false);
+	
+	var topButton = document.getElementById("topButton");
+	var bottomButton = document.getElementById("bottomButton");
+	
+	topButton.style.display = "none";
+	bottomButton.style.display ="none";
+	
+        
+   function whenVideoEnds(){
+	   console.log("this function runs when the video ends");
+	   topButton.style.display = "block";
+	   bottomButton.style.display ="block";
+}
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+		//alert("buttonOne works");
+		window.open ("Rejected.html",false)
+		//once you make the next HTML file, put it in line 65 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+   
+    }    
+	function buttonTwo() {
+		//alert("buttonOne works");
+		window.open ("GetDate.html",false)
+		//once you make the next HTML file, put it in line 65 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+   
+    }    
+	
+</script>
+</html>
+
